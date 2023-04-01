@@ -1,11 +1,11 @@
-public class KogtewransStudent extends HogwartsStudent{
+public class RavenclawsStudent extends Hogwarts{
     private int smart;
     private int wise;
     private int witty;
     private int creativity;
 
-    public KogtewransStudent(String fullName, int powerOfMagic, int transgressonDistance, int smart, int wise, int witty, int creativity) {
-        super(fullName, powerOfMagic, transgressonDistance);
+    public RavenclawsStudent(String fullName, int powerOfMagic, int transgressionDistance, int smart, int wise, int witty, int creativity) {
+        super(fullName, powerOfMagic, transgressionDistance);
         this.smart = smart;
         this.wise = wise;
         this.witty = witty;
@@ -30,14 +30,14 @@ public class KogtewransStudent extends HogwartsStudent{
 
     @Override
     public String toString() {
-        return "KogtewransStudent{" +
+        return "Kogtewrans{" +
                 "smart=" + smart +
                 ", wise=" + wise +
                 ", witty=" + witty +
                 ", creativity=" + creativity +
-                ", fullName=" + getfullName() +
-                ", powerOfMagic=" + getpowerOfMagic() +
-                ", transgressonDistance=" + gettransgressonDistance() +
+                ", fullName=" + getFullName() +
+                ", powerOfMagic=" + getPowerOfMagic() +
+                ", transgressionDistance=" + getTransgressionDistance() +
                 '}';
     }
 }

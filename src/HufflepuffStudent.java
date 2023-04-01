@@ -1,9 +1,9 @@
-public class Pufenduy extends HogwartsStudent {
+public class HufflepuffStudent extends Hogwarts {
     private int hardworking;
     private int loyal;
     private int honest;
 
-    public Pufenduy(String fullName, int powerOfMagic, int transgressonDistance, int hardworking, int loyal, int honest) {
+    public HufflepuffStudent(String fullName, int powerOfMagic, int transgressonDistance, int hardworking, int loyal, int honest) {
         super(fullName, powerOfMagic, transgressonDistance);
         this.hardworking = hardworking;
         this.loyal = loyal;
@@ -24,14 +24,16 @@ public class Pufenduy extends HogwartsStudent {
 
     @Override
     public String toString() {
-        return "Pufenduy{" +
+        return "PuffenduyStudent{" +
                 "hardworking=" + hardworking +
                 ", loyal=" + loyal +
                 ", honest=" + honest +
-                ", fullName=" + getfullName() +
-                ", powerOfMagic=" + getpowerOfMagic() +
-                ", transgressonDistance=" + gettransgressonDistance() +
+                ", fullName=" + getFullName() +
+                ", powerOfMagic=" + getPowerOfMagic() +
+                ", transgressionDistance=" + getTransgressionDistance() +
+                ", fullName=" + getFullName() +
+                ", powerOfMagic=" + getPowerOfMagic() +
+                ", transgressionDistance=" + getTransgressionDistance() +
                 '}';
     }
-
 }
