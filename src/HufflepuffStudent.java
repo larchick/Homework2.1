@@ -24,7 +24,7 @@ public class HufflepuffStudent extends Hogwarts {
 
     @Override
     public String toString() {
-        return "PuffenduyStudent{" +
+        return getFullName() + " PuffenduyStudent{" +
                 "hardworking=" + hardworking +
                 ", loyal=" + loyal +
                 ", honest=" + honest +
@@ -35,5 +35,21 @@ public class HufflepuffStudent extends Hogwarts {
                 ", powerOfMagic=" + getPowerOfMagic() +
                 ", transgressionDistance=" + getTransgressionDistance() +
                 '}';
+    }
+    private int getAbilitiesSum(){
+        return hardworking+honest+loyal;
+    }
+
+    public void compare (HufflepuffStudent student){
+        int student1Sum = this.getAbilitiesSum();
+
+        int student2Sum = student.getAbilitiesSum();
+        if (student1Sum >= student2Sum){
+            System.out.println("Студент " +this.getFullName() +" лучше, чем студент " +student.getFullName());
+        } else if (student1Sum > student2Sum){
+            System.out.println("Студент " +student.getFullName() +" лучше, чем студент " +this.getFullName());
+        }else {
+            System.out.println("Студент " +this.getFullName() +" и студент " +student.getFullName() + " одинаково хороши");
+        }
     }
 }

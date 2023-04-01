@@ -30,7 +30,7 @@ public class RavenclawsStudent extends Hogwarts{
 
     @Override
     public String toString() {
-        return "Kogtewrans{" +
+        return getFullName() + " Kogtewrans{" +
                 "smart=" + smart +
                 ", wise=" + wise +
                 ", witty=" + witty +
@@ -39,5 +39,22 @@ public class RavenclawsStudent extends Hogwarts{
                 ", powerOfMagic=" + getPowerOfMagic() +
                 ", transgressionDistance=" + getTransgressionDistance() +
                 '}';
+    }
+
+    private int getAbilitiesSum(){
+        return smart+wise+witty+creativity;
+    }
+
+    public void compare (RavenclawsStudent student){
+        int student1Sum = this.getAbilitiesSum();
+
+        int student2Sum = student.getAbilitiesSum();
+        if (student1Sum >= student2Sum){
+            System.out.println("Студент " +this.getFullName() +" лучше, чем студент " +student.getFullName());
+        } else if (student1Sum > student2Sum){
+            System.out.println("Студент " +student.getFullName() +" лучше, чем студент " +this.getFullName());
+        }else {
+            System.out.println("Студент " +this.getFullName() +" и студент " +student.getFullName() + " одинаково хороши");
+        }
     }
 }
